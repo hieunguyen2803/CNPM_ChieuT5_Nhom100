@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
 use App\Http\Controllers\AuthenticationController;
 
 Route::get( '/', function () {
@@ -19,11 +20,22 @@ Route::get( '/', function () {
 } );
 Route::get( "home", function () {
 	return view( "page.home" );
-} ) ->name('home');
+} )->name( 'home' );
 Route::get( "login", 'AuthenticationController@login' );
 Route::get( "register", function () {
-	return view( "page.register");
+	return view( "page.register" );
 } );
-Route::post( "login",'AuthenticationController@doLogin')->name("login");
-Route::post( "register",'AuthenticationController@register')->name("register");
-Route::get( "confirmRegister/{email}/{key}",'AuthenticationController@confirmRegister')->name("confirmRegister");
+Route::post( "login", 'AuthenticationController@doLogin' )->name( "login" );
+Route::post( "register", 'AuthenticationController@register' )->name( "register" );
+Route::get( "confirmRegister/{email}/{key}", 'AuthenticationController@confirmRegister' )->name( "confirmRegister" );
+
+Route::get( "change_password", function () {
+	return view( "page.change_password" );
+} );
+
+Route::get( "forgot", function () {
+	return view( "page.forgot_password" );
+} );
+Route::get( "forgot_password", function () {
+	return view( "page.change_pass_forgot" );
+} );

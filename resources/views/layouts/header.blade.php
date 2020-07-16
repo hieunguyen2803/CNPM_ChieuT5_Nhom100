@@ -15,9 +15,11 @@
                     <li class="nav-item"><a href="doctor.html" class="nav-link">Doctors</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal"
-                                                data-target="#modalAppointment"><span>Make an Appointment</span></a>
-                    </li>
+                    <li class="nav-item"><a href="{{asset('login')}}" class="nav-link">Login</a></li>
+                    <li class="nav-item"><a href="{{asset('register')}}" class="nav-link">Register</a></li>
+                    {{--<li class="nav-item cta"><a href="contact.html" class="nav-link" data-toggle="modal"--}}
+                                                {{--data-target="#modalAppointment"><span>Make an Appointment</span></a>--}}
+                    {{--</li>--}}
                 </ul>
             </div>
         </div>
