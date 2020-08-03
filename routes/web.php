@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\AuthenticationController;
-
+Route::get( "hello", 'welcom to world' );
 Route::get( '/', function () {
 	return view( 'page.home' );
 } );
