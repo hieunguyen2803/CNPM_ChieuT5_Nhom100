@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\AuthenticationController;
-Route::get( "hello", 'welcom to world' );
+
+//Route::get( "hello", 'welcom to world' );
 Route::get( '/', function () {
 	return view( 'page.home' );
 } );
@@ -38,7 +39,7 @@ Route::get( "fogot", function () {
 
 Route::get( "forgot_password", 'ForgotPasswordController@forgot' );
 
-Route::post( "forgot_password", 'ForgotPasswordController@password' )->name('forgot_password');
+Route::post( "forgot_password", 'ForgotPasswordController@password' )->name( 'forgot_password' );
 
 Route::get( "reset_password/{email}/{key}", 'ForgotPasswordController@reset' );
-Route::post( "reset_password/{email}/{key}", 'ForgotPasswordController@resetPassword' )->name("reset_password");
+Route::post( "reset_password/{email}/{key}", 'ForgotPasswordController@resetPassword' )->name( "reset_password" );
