@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthenticationController;
 
 Route::get( '/', function () {
-	return view( 'welcome' );
+	return view( 'page.home' );
 } );
 Route::get( "home", function () {
 	return view( "page.home" );
@@ -32,10 +32,13 @@ Route::get( "confirmRegister/{email}/{key}", 'AuthenticationController@confirmRe
 Route::get( "change_password", function () {
 	return view( "page.change_password" );
 } );
+Route::get( "fogot", function () {
+	return view( "page.reset_password" );
+} );
 
-Route::get( "forgot", function () {
-	return view( "page.forgot_password" );
-} );
-Route::get( "forgot_password", function () {
-	return view( "page.change_pass_forgot" );
-} );
+Route::get( "forgot_password", 'ForgotPasswordController@forgot' );
+
+Route::post( "forgot_password", 'ForgotPasswordController@password' )->name('forgot_password');
+
+Route::get( "reset_password/{email}/{key}", 'ForgotPasswordController@reset' );
+Route::post( "reset_password/{email}/{key}", 'ForgotPasswordController@resetPassword' )->name("reset_password");

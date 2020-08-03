@@ -41,7 +41,7 @@
                         <div class="ditk-inf sup-oi">
                             <h2 class="w-100">Already Have an Account </h2>
                             <p>Simply login to your account by clicking the login Button</p>
-                            <a href="index.html">
+                            <a href="{{asset('login')}}">
                                 <button type="button" class="btn btn-outline-light">SIGN IN</button>
                             </a>
                         </div>
@@ -87,7 +87,7 @@
                                             <i class="far fa-envelope"></i>
                                         </span>
                                 </div>
-                                <input type="email" class="form-control" placeholder="Email Address"
+                                <input type="email" class="form-control" placeholder="Email Address" value="email"
                                        aria-label="" aria-describedby="basic-addon1" required name="email">
                             </div>
 
@@ -96,7 +96,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
                                 </div>
-                                <input id="password" type="password" class="form-control" placeholder="Password" aria-label="Username"
+                                <input id="password" type="password" class="form-control" placeholder="Password" aria-label="Username" value="password"
                                        aria-describedby="basic-addon1" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                             </div>
                             <div class="input-group mb-3">
@@ -108,7 +108,7 @@
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
                                 </div>
                                 <input type="" class="form-control" placeholder="Phone Number" aria-label="Username"
                                        aria-describedby="basic-addon1" pattern="(\+84|0)\d{9,10}"

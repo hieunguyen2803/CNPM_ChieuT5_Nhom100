@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/cssAuth/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssAuth/css/style.css"/>
     <!--<link rel="shortcut icon" href="assets/images/fav.jpg">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/bootstrap.min.css')}}">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/fontawsom-all.min.css')}}">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/style.css')}}"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/bootstrap.min.css')}}">-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/fontawsom-all.min.css')}}">-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/style.css')}}"/>-->
 </head>
 
 <body>
@@ -42,19 +42,14 @@
                             @csrf
                             <div class="text-box-cont">
                                 @if(session('mess'))
-                                    <div class="alert alert-success" role="alert" style="font-size: 13px">
-                                        {{session('mess')}}
-                                    </div>
-                                @endif
-                                @if(session('success'))
-                                    <div class="alert alert-success" role="alert" style="font-size: 13px">
-                                        {{session('success')}}
-                                    </div>
+                                <div class="alert alert-success" role="alert" style="font-size: 13px">
+                                    {{session('mess')}}
+                                </div>
                                 @endif
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i
-                                                    class="fas fa-user"></i></span>
+                                                class="fas fa-user"></i></span>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Email" aria-label="Username"
                                            name="email" aria-describedby="basic-addon1">
@@ -62,15 +57,15 @@
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i
-                                                    class="fas fa-lock"></i></span>
+                                                class="fas fa-lock"></i></span>
                                     </div>
                                     <input type="password" class="form-control" placeholder="Password"
                                            aria-label="Username"
                                            name="password" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="row">
-                                    <a class="forget-p" href="{{asset('forgot_password')}}"
-                                       style="margin: 0 auto; margin-bottom: 25px">Forgot Password </a>
+                                    <a class="forget-p" href="{{asset('forgot')}}"
+                                       style="margin: 0 auto; margin-bottom: 30px">Forget Password </a>
                                 </div>
                                 <div class="input-group center mb-3">
                                     <button class="btn btn-success btn-round">SIGN IN</button>
