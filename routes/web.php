@@ -13,23 +13,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get( '/', function () {
+	return view( 'welcome' );
+} );
 Route::get( "home", function () {
-    return view( "page.home" );
+	return view( "page.home" );
 } )->name( 'home' );
 Route::get( "login", 'AuthenticationController@login' );
 Route::get( "register", function () {
-    return view( "page.register" );
+	return view( "page.register" );
 } );
 Route::post( "login", 'AuthenticationController@doLogin' )->name( "login" );
 Route::post( "register", 'AuthenticationController@register' )->name( "register" );
 Route::get( "confirmRegister/{email}/{key}", 'AuthenticationController@confirmRegister' )->name( "confirmRegister" );
 
 //login= google
-Route::get('/redirect', 'AuthenticationController@redirectToProvider')->name("redirect");
-Route::get('/callback', 'AuthenticationController@handleProviderCallback');
+Route::get( '/redirect', 'AuthenticationController@redirectToProvider' )->name( "redirect" );
+Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );
 
 //Lam login = facebook nhưng bị lỗi rồi
 //Route::get('/redirect/{provider}', 'AuthenticationController@redirect')->name("redirect");;
@@ -37,12 +37,18 @@ Route::get('/callback', 'AuthenticationController@handleProviderCallback');
 
 
 Route::get( "change_password", function () {
-    return view( "page.change_password" );
+	return view( "page.change_password" );
 } );
 
 Route::get( "forgot", function () {
-    return view( "page.forgot_password" );
+	return view( "page.forgot_password" );
 } );
 Route::get( "forgot_password", function () {
-    return view( "page.change_pass_forgot" );
+	return view( "page.change_pass_forgot" );
 } );
+Route::get( "forgot_password", 'ForgotPasswordController@forgot' );
+
+Route::post( "forgot_password", 'ForgotPasswordController@password' )->name( 'forgot_password' );
+
+Route::get( "reset_password/{email}/{key}", 'ForgotPasswordController@reset' );
+Route::post( "reset_password/{email}/{key}", 'ForgotPasswordController@resetPassword' )->name( "reset_password" );

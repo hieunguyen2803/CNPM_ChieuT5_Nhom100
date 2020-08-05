@@ -41,7 +41,7 @@
                         <div class="ditk-inf sup-oi">
                             <h2 class="w-100">Already Have an Account </h2>
                             <p>Simply login to your account by clicking the login Button</p>
-                            <a href="index.html">
+                            <a href="{{asset('login')}}">
                                 <button type="button" class="btn btn-outline-light">SIGN IN</button>
                             </a>
                         </div>

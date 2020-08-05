@@ -13,7 +13,7 @@
 {{--</head>--}}
 
 {{--<body>--}}
-@extends('auth.mass')
+@extends('auth.massReset')
 @section('reset')
     <div class="container-fluid ">
         <div class="container ">
@@ -54,7 +54,7 @@
                                             <i class="fas fa-lock"></i></i>
                                         </span>
                                         </div>
-                                        <input type="password" class="form-control" placeholder="New password"
+                                        <input id="password" type="password" class="form-control" placeholder="New password"
                                                aria-label="NewPassword" aria-describedby="basic-addon1"
                                                name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                                title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
@@ -62,11 +62,11 @@
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i
-                                                    class="fas fa-lock"></i></span>
+                                                    class="fas fa-lock" required></i></span>
                                         </div>
-                                        <input type="password" class="form-control" placeholder="ConfirmPassword"
+                                        <input id="confirm_password" type="password" class="form-control" placeholder="Confirm Password"
                                                aria-label="RePassword"
-                                               aria-describedby="basic-addon1" name="confirmPassword">
+                                               aria-describedby="basic-addon1" name="repassword" required>
                                     </div>
 
                                     <div class="input-group center sup mb-3">

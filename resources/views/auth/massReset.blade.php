@@ -20,6 +20,7 @@
 <script src="/css/cssAuth/js/popper.min.js"></script>
 <script src="/css/cssAuth/js/bootstrap.min.js"></script>
 <script src="/css/cssAuth/js/script.js"></script>
+<script src="{{asset('js/newJS/confirmpassJS.js')}}"></script>
 
 
 </html>
