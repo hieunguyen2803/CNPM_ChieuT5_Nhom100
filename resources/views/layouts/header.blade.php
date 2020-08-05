@@ -9,7 +9,7 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="{{asset('home`')}}" class="nav-link">Home</a></li>
+                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
                     <li class="nav-item"><a href="doctor.html" class="nav-link">Doctors</a></li>

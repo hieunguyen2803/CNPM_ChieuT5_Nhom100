@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-7 log-det" style="flex: none;max-width: none">
 
-                        <h2>Forgot Password</h2>
+                        <h2>Change Forgot Password</h2>
                         <div class="row">
                             <ul>
                                 {{--<li><i class="fab fa-facebook-f"></i></li>--}}
@@ -34,32 +34,31 @@
                         </div>
 
 
-                        <div class="text-box-cont" style="max-width: 450px">
-                            <div class="input-group mb-3">
-                                <label style="margin: 8px">Nhập Email:</label>
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1">
-                                       <i class="fas fa-lock"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Email" aria-label="Email"
-                                       aria-describedby="basic-addon1">
-                            </div>
+                        <div class="text-box-cont">
                             {{--<div class="input-group mb-3">--}}
                                 {{--<div class="input-group-prepend">--}}
                                         {{--<span class="input-group-text" id="basic-addon1">--}}
-                                            {{--<i class="fas fa-lock"></i></i>--}}
-                                        {{--</span>--}}
+                                       {{--<i class="fas fa-lock"></i></span>--}}
                                 {{--</div>--}}
-                                {{--<input type="text" class="form-control" placeholder="New password"--}}
-                                       {{--aria-label="NewPassword" aria-describedby="basic-addon1">--}}
-                            {{--</div>--}}
-                            {{--<div class="input-group mb-3">--}}
-                                {{--<div class="input-group-prepend">--}}
-                                    {{--<span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>--}}
-                                {{--</div>--}}
-                                {{--<input type="text" class="form-control" placeholder="Re_Password" aria-label="RePassword"--}}
+                                {{--<input type="text" class="form-control" placeholder="Old password" aria-label="OldPassword"--}}
                                        {{--aria-describedby="basic-addon1">--}}
                             {{--</div>--}}
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon1">
+                                            <i class="fas fa-lock"></i></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="New password"
+                                       aria-label="NewPassword" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Re_Password" aria-label="RePassword"
+                                       aria-describedby="basic-addon1">
+                            </div>
 
                             <div class="input-group center sup mb-3">
                                 <button class="btn btn-success btn-round">SUBMIT</button>

@@ -26,11 +26,11 @@
                         <div class="small-logo">
                             <i class="fab fa-asymmetrik"></i> Style Login
                         </div>
-                        <h2>Sign in</h2>
+                        <h2>Sign in to Smarteyeapps</h2>
                         <div class="row">
                             <ul>
-                                <li><i class="fab fa-facebook-f"></i></li>
-                                <li><i class="fab fa-twitter"></i></li>
+                                <li><a href="{{route('redirect')}}"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="{{route('redirect')}}"><i class="fab fa-google"></i></a></li>
                                 <li><i class="fab fa-linkedin-in"></i></li>
                             </ul>
                         </div>
@@ -40,42 +40,33 @@
 
                         <form action="{{route('login')}}" method="POST">
                             @csrf
-                            <div class="text-box-cont">
-                                @if(session('mess'))
-                                    <div class="alert alert-success" role="alert" style="font-size: 13px">
-                                        {{session('mess')}}
-                                    </div>
-                                @endif
-                                @if(session('success'))
-                                    <div class="alert alert-success" role="alert" style="font-size: 13px">
-                                        {{session('success')}}
-                                    </div>
-                                @endif
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i
-                                                    class="fas fa-user"></i></span>
-                                    </div>
-                                    <input type="text" class="form-control" placeholder="Email" aria-label="Username"
-                                           name="email" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" id="basic-addon1"><i
-                                                    class="fas fa-lock"></i></span>
-                                    </div>
-                                    <input type="password" class="form-control" placeholder="Password"
-                                           aria-label="Username"
-                                           name="password" aria-describedby="basic-addon1">
-                                </div>
-                                <div class="row">
-                                    <a class="forget-p" href="{{asset('forgot_password')}}"
-                                       style="margin: 0 auto; margin-bottom: 25px">Forgot Password </a>
-                                </div>
-                                <div class="input-group center mb-3">
-                                    <button class="btn btn-success btn-round">SIGN IN</button>
-                                </div>
+                        <div class="text-box-cont">
+                            @if(session('mess'))
+                            <div class="alert alert-success" role="alert" style="font-size: 13px">
+                                {{session('mess')}}
                             </div>
+                            @endif
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Email" aria-label="Username" required title=""
+                                     name="email"  aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                </div>
+                                <input type="password" class="form-control" placeholder="Password" aria-label="Username"
+                                    name="password"   aria-describedby="basic-addon1">
+                            </div>
+                            <div class="row">
+                                <p class="forget-p">Forget Password ?</p>
+                            </div>
+                            <div class="input-group center mb-3">
+                                <button class="btn btn-success btn-round">SIGN IN</button>
+                            </div>
+                        </div>
                         </form>
 
 
@@ -84,7 +75,7 @@
                         <div class="ditk-inf">
                             <h2 class="w-100">Din't Have an Account </h2>
                             <p>Simply Create your account by clicking the Signup Button</p>
-                            <a href="{{asset('register')}}">
+                            <a href="signup.html">
                                 <button type="button" class="btn btn-outline-light">SIGN UP</button>
                             </a>
                         </div>
