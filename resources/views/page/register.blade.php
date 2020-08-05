@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="css/cssAuth/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssAuth/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssAuth/css/style.css"/>
+    <style>
+        .box-de{
+            background-color: #167ce9;
+        }
+        .btn{
+            background-color: #167ce9
+        }
+    </style>
 
 </head>
 {{--<script>--}}
@@ -36,7 +44,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-5 box-de">
                         <div class="small-logo">
-                            <i class="fab fa-asymmetrik"></i> Style Login
+                            <i class="fab fa-asymmetrik"></i> Group 06
                         </div>
                         <div class="ditk-inf sup-oi">
                             <h2 class="w-100">Already Have an Account </h2>

@@ -10,6 +10,26 @@
     <link rel="stylesheet" href="css/cssAuth/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssAuth/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssAuth/css/style.css"/>
+    <style>
+
+        .btn{
+            background-color: #167ce9
+        }
+        body{
+            font-family: "mouse-300", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #7782aa;
+        }
+        body{
+            font-family: "mouse-300", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #7782aa;
+        }
+    </style>
 </head>
 
 <body>

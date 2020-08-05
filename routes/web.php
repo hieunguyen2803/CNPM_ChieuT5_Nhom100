@@ -19,14 +19,17 @@ Route::get( '/', function () {
 Route::get( "home", function () {
 	return view( "page.home" );
 } )->name( 'home' );
-Route::get( "login", 'AuthenticationController@login' );
+Route::get( "login", 'AuthenticationController@login' )->name("lo");
 Route::get( "register", function () {
 	return view( "page.register" );
 } );
+Route::get( "doctor", function () {
+    return view( "page.doctor" );
+} )->name( 'doctor' )->middleware('checkMiddleware');
 Route::post( "login", 'AuthenticationController@doLogin' )->name( "login" );
 Route::post( "register", 'AuthenticationController@register' )->name( "register" );
 Route::get( "confirmRegister/{email}/{key}", 'AuthenticationController@confirmRegister' )->name( "confirmRegister" );
-
+Route::get( "logout", 'AuthenticationController@logout' )->name( "logout" );
 //login= google
 Route::get( '/redirect', 'AuthenticationController@redirectToProvider' )->name( "redirect" );
 Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );

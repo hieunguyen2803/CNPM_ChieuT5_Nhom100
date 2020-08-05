@@ -4,12 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Free Stylish Login Page Website Template | Smarteyeapps.com</title>
+    <title>Login - MasterCare</title>
 
     <link rel="shortcut icon" href="css/cssAuth/images/lg.jpg">
     <link rel="stylesheet" href="css/cssAuth/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssAuth/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssAuth/css/style.css"/>
+    <style>
+        .box-de{
+            background-color: #167ce9;
+        }
+        .btn{
+            background-color: #167ce9;
+        }
+        body{
+            font-family: "mouse-300", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #7782aa;
+        }
+    </style>
     <!--<link rel="shortcut icon" href="assets/images/fav.jpg">-->
 <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/bootstrap.min.css')}}">-->
 <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/fontawsom-all.min.css')}}">-->
@@ -24,9 +39,9 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-7 log-det">
                         <div class="small-logo">
-                            <i class="fab fa-asymmetrik"></i> Style Login
+                            <i class="fab fa-asymmetrik"></i> Group 06
                         </div>
-                        <h2>Sign in to Smarteyeapps</h2>
+                        <h2>Sign in to MasterCare</h2>
                         <div class="row">
                             <ul>
                                 <li><a href="{{route('redirect')}}"><i class="fab fa-facebook-f"></i></a></li>

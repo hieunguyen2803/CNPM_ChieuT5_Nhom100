@@ -40,6 +40,11 @@ class AuthenticationController extends Controller
         //return login view
         return view('page.login');
     }
+    function logout(){
+        Auth::logout();
+        return redirect()->route('home');
+    }
+
 
     function register(Request $request)
     {//usecase register
@@ -56,6 +61,7 @@ class AuthenticationController extends Controller
         $user->last_name = $request->input('lastname');
         $user->first_name = $request->input('firstname');
         $user->email = $request->input('email');
+        //encrypt key
         $user->password = Hash::make($request->input('password'));
         $user->phone = $request->input('phone');
         $user->gender = $request->input('gender');
@@ -98,7 +104,7 @@ class AuthenticationController extends Controller
         try {
             $user = Socialite::driver('google')->user();
         } catch (\Exception $e) {
-            return redirect('/login');
+            return redirect('/home');
 
         }
         // only allow people with @company.com to login

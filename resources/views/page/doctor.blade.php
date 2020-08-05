@@ -22,19 +22,19 @@
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link px-4 active" id="v-pills-master-tab" data-toggle="pill"
                            href="#v-pills-master" role="tab" aria-controls="v-pills-master" aria-selected="true"><span
-                                    class="mr-3 flaticon-cardiogram"></span> Cardiology</a>
+                                class="mr-3 flaticon-cardiogram"></span> Cardiology</a>
 
                         <a class="nav-link px-4" id="v-pills-buffet-tab" data-toggle="pill" href="#v-pills-buffet"
                            role="tab" aria-controls="v-pills-buffet" aria-selected="false"><span
-                                    class="mr-3 flaticon-neurology"></span> Neurology</a>
+                                class="mr-3 flaticon-neurology"></span> Neurology</a>
 
                         <a class="nav-link px-4" id="v-pills-fitness-tab" data-toggle="pill" href="#v-pills-fitness"
                            role="tab" aria-controls="v-pills-fitness" aria-selected="false"><span
-                                    class="mr-3 flaticon-stethoscope"></span> Diagnostic</a>
+                                class="mr-3 flaticon-stethoscope"></span> Diagnostic</a>
 
                         <a class="nav-link px-4" id="v-pills-reception-tab" data-toggle="pill" href="#v-pills-reception"
                            role="tab" aria-controls="v-pills-reception" aria-selected="false"><span
-                                    class="mr-3 flaticon-tooth"></span> Dental</a>
+                                class="mr-3 flaticon-tooth"></span> Dental</a>
 
                         <a class="nav-link px-4" id="v-pills-sea-tab" data-toggle="pill" href="#v-pills-sea" role="tab"
                            aria-controls="v-pills-sea" aria-selected="false"><span class="mr-3 flaticon-vision"></span>
@@ -42,7 +42,7 @@
 
                         <a class="nav-link px-4" id="v-pills-spa-tab" data-toggle="pill" href="#v-pills-spa" role="tab"
                            aria-controls="v-pills-spa" aria-selected="false"><span
-                                    class="mr-3 flaticon-ambulance"></span> Emergency</a>
+                                class="mr-3 flaticon-ambulance"></span> Emergency</a>
                     </div>
                 </div>
                 <div class="col-md-8 ftco-animate p-4 p-md-5 d-flex align-items-center">
@@ -206,7 +206,7 @@
                                         <div class="img" style="background-image: url(images/doctor-1.jpg);"></div>
                                     </div>
                                     <div class="name align-self-center">Aldin Powell <span
-                                                class="position">Neurologist</span></div>
+                                            class="position">Neurologist</span></div>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                                         <div class="img" style="background-image: url(images/doctor-2.jpg);"></div>
                                     </div>
                                     <div class="name align-self-center">Aldin Powell <span
-                                                class="position">Pediatrician</span></div>
+                                            class="position">Pediatrician</span></div>
                                 </div>
                             </div>
                         </div>

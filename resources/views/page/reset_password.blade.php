@@ -13,6 +13,21 @@
 {{--</head>--}}
 
 {{--<body>--}}
+<style>
+    .box-de{
+        background-color: #167ce9;
+    }
+    .btn{
+        background-color:#167ce9;
+    }
+    body{
+        font-family: "mouse-300", Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        line-height: 1.8;
+        font-weight: 400;
+        color: #7782aa;
+    }
+</style>
 @extends('auth.massReset')
 @section('reset')
     <div class="container-fluid ">
@@ -70,7 +85,7 @@
                                     </div>
 
                                     <div class="input-group center sup mb-3">
-                                        <button class="btn btn-success btn-round">SUBMIT</button>
+                                        <button class="btn btn-success btn-round" style="background-color: #167ce9;">SUBMIT</button>
                                     </div>
                                 </div>
                             </form>
