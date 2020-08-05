@@ -71,7 +71,11 @@
                         <form action="{{route('register')}} "method="POST">
                         @csrf
                         <div class="text-box-cont">
-
+                            @if(session('mess'))
+                                <div class="alert alert-danger" role="alert" style="font-size: 13px">
+                                    {{session('mess')}}
+                                </div>
+                            @endif
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">

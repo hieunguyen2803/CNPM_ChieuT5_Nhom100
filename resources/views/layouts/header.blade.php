@@ -16,7 +16,7 @@
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     @if(Auth::check())
-                    <li class="nav-item cta"><a href="" class="nav-link" ><i class="far fa-user"></i><span>{{Auth::User() -> first_name}}</span></a></li>
+                    <li class="nav-item cta"><a href="{{asset('profile')}}" class="nav-link" ><i class="far fa-user"></i><span>{{Auth::User() -> first_name}}</span></a></li>
                     <li class="nav-item cta"><a href="{{asset('logout')}}" class="nav-link" ><i class="far fa-user"></i><span>LogOut</span></a></li>
                         @else
                         <li class="nav-item cta"><a href="{{asset('login')}}" class="nav-link" ><i class="far fa-user"></i><span>Login</span></a></li>

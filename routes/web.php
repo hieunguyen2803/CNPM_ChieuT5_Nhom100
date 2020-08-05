@@ -30,6 +30,9 @@ Route::post( "login", 'AuthenticationController@doLogin' )->name( "login" );
 Route::post( "register", 'AuthenticationController@register' )->name( "register" );
 Route::get( "confirmRegister/{email}/{key}", 'AuthenticationController@confirmRegister' )->name( "confirmRegister" );
 Route::get( "logout", 'AuthenticationController@logout' )->name( "logout" );
+Route::get( "profile", function (){
+    return view('page.profile');
+})->name( "profile" );
 //login= google
 Route::get( '/redirect', 'AuthenticationController@redirectToProvider' )->name( "redirect" );
 Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );
@@ -41,7 +44,7 @@ Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );
 
 Route::get( "change_password", function () {
 	return view( "page.change_password" );
-} );
+} )->name("change_pass");
 
 Route::get( "forgot", function () {
 	return view( "page.forgot_password" );
