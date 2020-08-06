@@ -28,6 +28,9 @@ class Users extends Migration
             $table->string('avatar')->default(null);
             $table->string('avatar_origin')->default(null);
             $table->string('remember_token')->default(null);
+            $table->timestamp('created_at')->default(null);
+            $table->timestamp('updated_at')->default(null);
+
 
         });
     }
