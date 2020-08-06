@@ -29,7 +29,7 @@ class AuthenticationController extends Controller
             return redirect()->route('home')->with('user', Auth::user());
         } else {
             //if false return back to login view
-            return redirect()->back()->withInput();
+            return redirect()->back()->with('error4', 'Wrong account information !!!');
         }
 
 
