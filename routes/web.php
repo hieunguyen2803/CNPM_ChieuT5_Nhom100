@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get( '/', function () {
-	return view( 'welcome' );
+	return view( 'page.home' );
 } );
 Route::get( "home", function () {
 	return view( "page.home" );
@@ -30,6 +30,12 @@ Route::post( "login", 'AuthenticationController@doLogin' )->name( "login" );
 Route::post( "register", 'AuthenticationController@register' )->name( "register" );
 Route::get( "confirmRegister/{email}/{key}", 'AuthenticationController@confirmRegister' )->name( "confirmRegister" );
 Route::get( "logout", 'AuthenticationController@logout' )->name( "logout" );
+//<<<<<<< HEAD
+//=======
+Route::get( "profile", function (){
+    return view('page.profile');
+})->name( "profile" );
+//>>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514
 //login= google
 Route::get( '/redirect', 'AuthenticationController@redirectToProvider' )->name( "redirect" );
 Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );
@@ -41,7 +47,7 @@ Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );
 
 Route::get( "change_password", function () {
 	return view( "page.change_password" );
-} );
+} )->name("change_pass");
 
 Route::get( "forgot", function () {
 	return view( "page.forgot_password" );

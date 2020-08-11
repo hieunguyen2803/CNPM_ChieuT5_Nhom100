@@ -29,7 +29,7 @@ class AuthenticationController extends Controller
             return redirect()->route('home')->with('user', Auth::user());
         } else {
             //if false return back to login view
-            return redirect()->back()->withInput();
+            return redirect()->back()->with('error4', 'Wrong account information !!!');
         }
 
 
@@ -45,6 +45,15 @@ class AuthenticationController extends Controller
         return redirect()->route('home');
     }
 
+<<<<<<< HEAD
+=======
+    function logout()
+    {
+        Auth::logout();
+        return redirect()->route('home');
+    }
+
+>>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514
 
     function register(Request $request)
     {//usecase register
@@ -52,6 +61,7 @@ class AuthenticationController extends Controller
         $randomKey = Str::random(32);
         $input = $request->all();
         //send mail to user to confirm
+<<<<<<< HEAD
 
         Mail::send('mail.mail', ['key' => $randomKey, 'email' => $request->input('email')], function ($message) use ($input) {
             $message->to($input["email"], 'Client')->subject('Confirm Register');
@@ -69,7 +79,32 @@ class AuthenticationController extends Controller
         $user->save();
 
         return redirect()->route('login')->with('mess', 'Đăng kí thành công, vui lòng check mail để actived tài khoản');
+=======
+        $g = User::select('*')->where('email', $request->input('email'))->count();
+        if ($g != 0) {
+            return redirect()->route('register')->with('mess', 'Email already exists!!!');
+        }else
+        {
+            Mail::send('mail.mail', ['key' => $randomKey, 'email' => $request->input('email')], function ($message) use ($input) {
+                $message->to($input["email"], 'Client')->subject('Confirm Register');
 
+            });
+>>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514
+
+            //update user's information into database
+            $user = new User;
+            $user->last_name = $request->input('lastname');
+            $user->first_name = $request->input('firstname');
+            $user->email = $request->input('email');
+            //encrypt key
+            $user->password = Hash::make($request->input('password'));
+            $user->phone = $request->input('phone');
+            $user->gender = $request->input('gender');
+            $user->key = $randomKey;
+            $user->save();
+
+            return redirect()->route('login')->with('mess', 'Sign up successful !!! Please check your email to activate your account.');
+        }
     }
 
     //this function is called when user click on a link attached on mail which is sent when user click button 'register'.
@@ -84,7 +119,11 @@ class AuthenticationController extends Controller
             //update isactive ==1;
             User::where('email', $email)->update(['isactive' => 1]);
             //return login view with message
+<<<<<<< HEAD
             return redirect()->route('login')->with('mess', 'Vui lòng điền thông tin.');
+=======
+            return redirect()->route('login')->with('mess', 'Successful Activation !!! Please enter account information.');
+>>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514
         } else {
             // echo fail on screen
             echo 'error';
@@ -116,7 +155,11 @@ class AuthenticationController extends Controller
         if ($existingUser) {
             // log them in
             auth()->login($existingUser, true);
+<<<<<<< HEAD
             echo 'Vui lòng đăng nhập lại';
+=======
+            echo 'Please Login again';
+>>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514
         } else {
             // create a new user
             $newUser = new User;

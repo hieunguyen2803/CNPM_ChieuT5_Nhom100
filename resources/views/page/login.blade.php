@@ -66,6 +66,14 @@
                                         {{session('success')}}
                                     </div>
                                 @endif
+{{--<<<<<<< HEAD--}}
+{{--=======--}}
+                                    @if(session('error4'))
+                                        <div class="alert alert-danger" role="alert" style="font-size: 13px">
+                                            {{session('error4')}}
+                                        </div>
+                                    @endif
+{{-->>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514--}}
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i
