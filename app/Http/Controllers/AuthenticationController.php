@@ -92,12 +92,13 @@ class AuthenticationController extends Controller
         //check instance key is exit in database
         if ($dbKey[0]->key == $key) {
             //update isactive ==1;
-            User::where('email', $email)->update(['isactive' => 1]);
+            $randomKey = Str::random(32);
+            User::where('email', $email)->update(['isactive' => 1, 'key'=> $randomKey]);
+
             //return login view with message
             return redirect()->route('login')->with('mess', 'Successful Activation !!! Please enter account information.');
         } else {
-            // echo fail on screen
-            echo 'error';
+            return redirect()->route('login')->with('error4', 'This email has been actived');
         }
 
 

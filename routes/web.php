@@ -24,7 +24,8 @@ Route::get( "register", function () {
 	return view( "page.register" );
 } );
 Route::get( "doctor", function () {
-    return view( "page.doctor" );
+//    return view( "page.doctor" );
+    return Redirect::to('https://healthcaree.herokuapp.com/');
 } )->name( 'doctor' )->middleware('checkMiddleware');
 Route::post( "login", 'AuthenticationController@doLogin' )->name( "login" );
 Route::post( "register", 'AuthenticationController@register' )->name( "register" );
