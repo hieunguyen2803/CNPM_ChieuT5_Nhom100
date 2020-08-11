@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Remedic - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Group06 - MasterCare</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -25,6 +25,18 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            font-family: "mouse-300", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #7782aa;
+        }
+        .slider-text h1 {
+            width: 632px;
+        }
+    </style>
 </head>
 <body>
 @include("layouts.header")

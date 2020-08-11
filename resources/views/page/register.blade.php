@@ -10,6 +10,14 @@
     <link rel="stylesheet" href="css/cssAuth/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssAuth/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssAuth/css/style.css"/>
+    <style>
+        .box-de{
+            background-color: #167ce9;
+        }
+        .btn{
+            background-color: #167ce9
+        }
+    </style>
 
 </head>
 {{--<script>--}}
@@ -36,12 +44,12 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-5 box-de">
                         <div class="small-logo">
-                            <i class="fab fa-asymmetrik"></i> Style Login
+                            <i class="fab fa-asymmetrik"></i> Group 06
                         </div>
                         <div class="ditk-inf sup-oi">
                             <h2 class="w-100">Already Have an Account </h2>
                             <p>Simply login to your account by clicking the login Button</p>
-                            <a href="index.html">
+                            <a href="{{asset('login')}}">
                                 <button type="button" class="btn btn-outline-light">SIGN IN</button>
                             </a>
                         </div>
@@ -51,8 +59,8 @@
                         <h2>Create Account</h2>
                         <div class="row">
                             <ul>
-                                <li><i class="fab fa-facebook-f"></i></li>
-                                <li><i class="fab fa-twitter"></i></li>
+                               <li><a href="{{route('redirect',['facebook'])}}"><i class="fab fa-facebook-f"></i></a></li>
+                               <li><a href="{{route('redirect')}}"><i class="fab fa-google"></i></a></li>
                                 <li><i class="fab fa-linkedin-in"></i></li>
                             </ul>
                         </div>
@@ -63,6 +71,7 @@
                         <form action="{{route('register')}} "method="POST">
                         @csrf
                         <div class="text-box-cont">
+
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1">
@@ -87,6 +96,7 @@
                                             <i class="far fa-envelope"></i>
                                         </span>
                                 </div>
+
                                 <input type="email" class="form-control" placeholder="Email Address"
                                        aria-label="" aria-describedby="basic-addon1" required name="email">
                             </div>
@@ -108,7 +118,7 @@
                             </div>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-mobile-alt"></i></span>
                                 </div>
                                 <input type="" class="form-control" placeholder="Phone Number" aria-label="Username"
                                        aria-describedby="basic-addon1" pattern="(\+84|0)\d{9,10}"

@@ -4,31 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Login - MasterCare</title>
+    <title> Free Stylish Login Page Website Template | Smarteyeapps.com</title>
 
     <link rel="shortcut icon" href="css/cssAuth/images/lg.jpg">
     <link rel="stylesheet" href="css/cssAuth/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssAuth/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssAuth/css/style.css"/>
-    <style>
-        .box-de{
-            background-color: #167ce9;
-        }
-        .btn{
-            background-color: #167ce9;
-        }
-        body{
-            font-family: "mouse-300", Arial, Helvetica, sans-serif;
-            font-size: 15px;
-            line-height: 1.8;
-            font-weight: 400;
-            color: #7782aa;
-        }
-    </style>
     <!--<link rel="shortcut icon" href="assets/images/fav.jpg">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/bootstrap.min.css')}}">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/fontawsom-all.min.css')}}">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/style.css')}}"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/bootstrap.min.css')}}">-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/fontawsom-all.min.css')}}">-->
+    <!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/style.css')}}"/>-->
 </head>
 
 <body>
@@ -39,13 +24,13 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-7 log-det">
                         <div class="small-logo">
-                            <i class="fab fa-asymmetrik"></i> Group 06
+                            <i class="fab fa-asymmetrik"></i> Style Login
                         </div>
-                        <h2>Sign in to MasterCare</h2>
+                        <h2>Sign in</h2>
                         <div class="row">
                             <ul>
-                                <li><a href="{{route('redirect')}}"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="{{route('redirect')}}"><i class="fab fa-google"></i></a></li>
+                                <li><i class="fab fa-facebook-f"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
                                 <li><i class="fab fa-linkedin-in"></i></li>
                             </ul>
                         </div>
@@ -57,36 +42,30 @@
                             @csrf
                             <div class="text-box-cont">
                                 @if(session('mess'))
-                                    <div class="alert alert-success" role="alert" style="font-size: 13px">
-                                        {{session('mess')}}
-                                    </div>
-                                @endif
-                                @if(session('success'))
-                                    <div class="alert alert-success" role="alert" style="font-size: 13px">
-                                        {{session('success')}}
-                                    </div>
+                                <div class="alert alert-success" role="alert" style="font-size: 13px">
+                                    {{session('mess')}}
+                                </div>
                                 @endif
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i
-                                                    class="fas fa-user"></i></span>
+                                                class="fas fa-user"></i></span>
                                     </div>
                                     <input type="text" class="form-control" placeholder="Email" aria-label="Username"
-                                           required title=""
                                            name="email" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i
-                                                    class="fas fa-lock"></i></span>
+                                                class="fas fa-lock"></i></span>
                                     </div>
                                     <input type="password" class="form-control" placeholder="Password"
                                            aria-label="Username"
                                            name="password" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="row">
-                                    <a class="forget-p" href="{{asset('forgot_password')}}"
-                                       style="margin: 0 auto; margin-bottom: 25px">Forgot Password </a>
+                                    <a class="forget-p" href="{{asset('forgot')}}"
+                                       style="margin: 0 auto; margin-bottom: 30px">Forget Password </a>
                                 </div>
                                 <div class="input-group center mb-3">
                                     <button class="btn btn-success btn-round">SIGN IN</button>

@@ -4,12 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Free Stylish Login Page Website Template | Smarteyeapps.com</title>
+    <title> Forgot password</title>
 
     <link rel="shortcut icon" href="css/cssAuth/images/lg.jpg">
     <link rel="stylesheet" href="css/cssAuth/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/cssAuth/css/fontawsom-all.min.css">
     <link rel="stylesheet" type="text/css" href="css/cssAuth/css/style.css"/>
+    <style>
+
+        .btn{
+            background-color: #167ce9
+        }
+        body{
+            font-family: "mouse-300", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #7782aa;
+        }
+        body{
+            font-family: "mouse-300", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            font-weight: 400;
+            color: #7782aa;
+        }
+    </style>
 </head>
 
 <body>
@@ -33,39 +53,35 @@
                             <p class="small-info"></p>
                         </div>
 
-
-                        <div class="text-box-cont" style="max-width: 450px">
-                            <div class="input-group mb-3">
-                                <label style="margin: 8px">Nhập Email:</label>
-                                <div class="input-group-prepend">
+                        <form action="{{route('forgot_password')}}" method="POST">
+                            {{ csrf_field() }}
+                            {{--@csrf--}}
+                            <div class="text-box-cont" style="max-width: 450px">
+                                @if(session('error'))
+                                    <div class="alert alert-success" role="alert" style="font-size: 14px;color: red">
+                                        {{session('error')}}
+                                    </div>
+                                @endif
+                                @if(session('success'))
+                                    <div class="alert alert-success" role="alert" style="font-size: 14px">
+                                        {{session('success')}}
+                                    </div>
+                                @endif
+                                <div class="input-group mb-3">
+                                    <label style="margin: 8px">Nhập Email:</label>
+                                    <div class="input-group-prepend">
                                     <span class="input-group-text" id="basic-addon1">
-                                       <i class="fas fa-lock"></i></span>
+                                       <i class="fas fa-user"></i></span>
+                                    </div>
+                                    <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                           aria-describedby="basic-addon1" name="email" value="" required>
                                 </div>
-                                <input type="text" class="form-control" placeholder="Email" aria-label="Email"
-                                       aria-describedby="basic-addon1">
-                            </div>
-                            {{--<div class="input-group mb-3">--}}
-                                {{--<div class="input-group-prepend">--}}
-                                        {{--<span class="input-group-text" id="basic-addon1">--}}
-                                            {{--<i class="fas fa-lock"></i></i>--}}
-                                        {{--</span>--}}
-                                {{--</div>--}}
-                                {{--<input type="text" class="form-control" placeholder="New password"--}}
-                                       {{--aria-label="NewPassword" aria-describedby="basic-addon1">--}}
-                            {{--</div>--}}
-                            {{--<div class="input-group mb-3">--}}
-                                {{--<div class="input-group-prepend">--}}
-                                    {{--<span class="input-group-text" id="basic-addon1"><i class="fas fa-lock"></i></span>--}}
-                                {{--</div>--}}
-                                {{--<input type="text" class="form-control" placeholder="Re_Password" aria-label="RePassword"--}}
-                                       {{--aria-describedby="basic-addon1">--}}
-                            {{--</div>--}}
 
-                            <div class="input-group center sup mb-3">
-                                <button class="btn btn-success btn-round">SUBMIT</button>
+                                <div class="input-group center sup mb-3">
+                                    <button class="btn btn-success btn-round">SUBMIT</button>
+                                </div>
                             </div>
-                        </div>
-
+                        </form>
 
                     </div>
 
