@@ -25,10 +25,7 @@
             color: #7782aa;
         }
     </style>
-    <!--<link rel="shortcut icon" href="assets/images/fav.jpg">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/bootstrap.min.css')}}">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/fontawsom-all.min.css')}}">-->
-<!--<link rel="stylesheet" type="text/css" href="{{asset('cssAuth/css/style.css')}}"/>-->
+
 </head>
 
 <body>
@@ -66,14 +63,11 @@
                                         {{session('success')}}
                                     </div>
                                 @endif
-{{--<<<<<<< HEAD--}}
-{{--=======--}}
                                     @if(session('error4'))
                                         <div class="alert alert-danger" role="alert" style="font-size: 13px">
                                             {{session('error4')}}
                                         </div>
                                     @endif
-{{-->>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514--}}
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text" id="basic-addon1"><i

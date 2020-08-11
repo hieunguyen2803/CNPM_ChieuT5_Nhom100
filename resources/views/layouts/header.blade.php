@@ -1,33 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="index.html"><i class="flaticon-pharmacy"></i><span>Re</span>Medic</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html"><i class="flaticon-pharmacy"></i><span>Re</span>Medic</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
-                    <li class="nav-item"><a href="{{asset('doctor')}}" class="nav-link">Doctors</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    @if(Auth::check())
-{{--<<<<<<< HEAD--}}
-                    <li class="nav-item cta"><a href="" class="nav-link" ><i class="far fa-user"></i><span>{{Auth::User() -> first_name}}</span></a></li>
-=======
-                    <li class="nav-item cta"><a href="{{asset('profile')}}" class="nav-link" ><i class="far fa-user"></i><span>{{Auth::User() -> first_name}}</span></a></li>
-{{-->>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514--}}
-                    <li class="nav-item cta"><a href="{{asset('logout')}}" class="nav-link" ><i class="far fa-user"></i><span>LogOut</span></a></li>
-                        @else
-                        <li class="nav-item cta"><a href="{{asset('login')}}" class="nav-link" ><i class="far fa-user"></i><span>Login</span></a></li>
-                        <li class="nav-item cta"><a href="{{asset('register')}}" class="nav-link" ><i class="far fa-user"></i><span>Sign Up</span></a></li>
-                    @endif
-                </ul>
-            </div>
-
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="departments.html" class="nav-link">Departments</a></li>
+                <li class="nav-item"><a href="{{asset('doctor')}}" class="nav-link">Doctors</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                @if(Auth::check())
+                    <li class="nav-item cta"><a href="{{asset('profile')}}" class="nav-link"><i class="far fa-user"></i><span>{{Auth::User() -> first_name}}</span></a>
+                    </li>
+                    <li class="nav-item cta"><a href="{{asset('logout')}}" class="nav-link"><i
+                                class="far fa-user"></i><span>LogOut</span></a></li>
+                @else
+                    <li class="nav-item cta"><a href="{{asset('login')}}" class="nav-link"><i
+                                class="far fa-user"></i><span>Login</span></a></li>
+                    <li class="nav-item cta"><a href="{{asset('register')}}" class="nav-link"><i
+                                class="far fa-user"></i><span>Sign Up</span></a></li>
+                @endif
+            </ul>
         </div>
-    </nav>
+
+    </div>
+</nav>

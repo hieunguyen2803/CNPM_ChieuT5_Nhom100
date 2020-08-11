@@ -30,12 +30,9 @@ Route::post( "login", 'AuthenticationController@doLogin' )->name( "login" );
 Route::post( "register", 'AuthenticationController@register' )->name( "register" );
 Route::get( "confirmRegister/{email}/{key}", 'AuthenticationController@confirmRegister' )->name( "confirmRegister" );
 Route::get( "logout", 'AuthenticationController@logout' )->name( "logout" );
-//<<<<<<< HEAD
-//=======
 Route::get( "profile", function (){
     return view('page.profile');
 })->name( "profile" );
-//>>>>>>> 662ab192726b254b10ef8ced0b9cc8f360b96514
 //login= google
 Route::get( '/redirect', 'AuthenticationController@redirectToProvider' )->name( "redirect" );
 Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );

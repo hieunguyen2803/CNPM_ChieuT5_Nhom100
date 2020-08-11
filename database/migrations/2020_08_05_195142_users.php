@@ -31,7 +31,6 @@ class Users extends Migration
             $table->timestamp('created_at')->nullable()->default(null);
             $table->timestamp('updated_at')->nullable()->default(null);
 
-
         });
     }
 
