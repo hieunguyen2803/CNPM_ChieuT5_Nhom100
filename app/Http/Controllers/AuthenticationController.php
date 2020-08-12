@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
-use Socialite;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthenticationController extends Controller
 {
@@ -105,69 +105,35 @@ class AuthenticationController extends Controller
     }
 
     //register & login = google
-    public function redirectToProvider()
+    public function redirect($provider)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($provider)->redirect();
     }
 
-    public function handleProviderCallback()
-    {
-        try {
-            $user = Socialite::driver('google')->user();
-        } catch (\Exception $e) {
-            return redirect('/home');
 
-        }
-        // only allow people with @company.com to login
-        if (explode("@", $user->email)[1] !== 'gmail.com') {
-            return redirect()->to('/');
-        }
-        // check if they're an existing user
-        $existingUser = User::where('email', $user->email)->first();
-        if ($existingUser) {
-            // log them in
-            auth()->login($existingUser, true);
-            echo 'Please Login again';
-        } else {
-            // create a new user
-            $newUser = new User;
-            $newUser->name = $user->name;
-            $newUser->name = $user->name;
-            $newUser->email = $user->email;
-            $newUser->google_id = $user->id;
-            $newUser->avatar = $user->avatar;
-            $newUser->first_name = $user->name;
-            $newUser->avatar_original = $user->avatar_original;
-            $newUser->save();
-            auth()->login($newUser, true);
-        }
+    public function handleProviderCallback($provider)
+    {
+        $user = Socialite::driver($provider)->stateless()->user();
+        $authUser = $this->findOrCreate($user, $provider);
+        Auth::login($authUser, true);
         return redirect()->to('/home')->with('user', Auth::user());
     }
-
-
-//register & login = google & facebook
-//    public function redirect($provider)
-//    {
-//        return Socialite::driver($provider)->redirect();
-//    }
-//    public function callback($provider)
-//    {
-//        $getInfo = Socialite::driver($provider)->user();
-//        $user = $this->createUser($getInfo,$provider);
-//        auth()->login($user);
-//        return redirect()->to('/home');
-//    }
-//    function createUser($getInfo,$provider){
-//        $user = User::where('provider_id', $getInfo->id)->first();
-//        if (!$user) {
-//            $user = User::create([
-//                'name'     => $getInfo->name,
-//                'email'    => $getInfo->email,
-//                'provider' => $provider,
-//                'provider_id' => $getInfo->id
-//            ]);
-//            $user ->assignRole('Super Admin');
-//        }
-//        return $user;
-//    }
+    public function findOrCreate($user, $provider)
+    {
+        $userUnique = User::where('email', $user->email)->first();
+        if ($userUnique) {
+            return $userUnique;
+        }
+        $authUser = User::where('provider_id', $user->id)->first();
+        if ($authUser) {
+            return $authUser;
+        }
+        return User::create([
+//          cái ngoaif trước là nằm dưới database cái ngoài sau là trong laravel
+           'first_name' => $user->name,
+            'email' => $user->email,
+            'provider' => strtoupper($provider),
+            'provider_id' => $user->id,
+        ]);
+    }
 }

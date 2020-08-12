@@ -18,12 +18,12 @@
                     <li class="nav-item cta"><a href="{{asset('profile')}}" class="nav-link"><i class="far fa-user"></i><span>{{Auth::User() -> first_name}}</span></a>
                     </li>
                     <li class="nav-item cta"><a href="{{asset('logout')}}" class="nav-link"><i
-                                class="far fa-user"></i><span>LogOut</span></a></li>
+                                class="far fa-user"></i><span>Log out</span></a></li>
                 @else
                     <li class="nav-item cta"><a href="{{asset('login')}}" class="nav-link"><i
                                 class="far fa-user"></i><span>Login</span></a></li>
                     <li class="nav-item cta"><a href="{{asset('register')}}" class="nav-link"><i
-                                class="far fa-user"></i><span>Sign Up</span></a></li>
+                                class="far fa-user"></i><span>Sign up</span></a></li>
                 @endif
             </ul>
         </div>

@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,14 +33,10 @@ Route::get( "logout", 'AuthenticationController@logout' )->name( "logout" );
 Route::get( "profile", function (){
     return view('page.profile');
 })->name( "profile" );
-//login= google
-Route::get( '/redirect', 'AuthenticationController@redirectToProvider' )->name( "redirect" );
-Route::get( '/callback', 'AuthenticationController@handleProviderCallback' );
 
-//Lam login = facebook nhưng bị lỗi rồi
-//Route::get('/redirect/{provider}', 'AuthenticationController@redirect')->name("redirect");;
-//Route::get('/callback/{provider}', 'AuthenticationController@callback');
-
+//login facebook google
+Route::get('/auth/{provider}','AuthenticationController@redirect');
+Route::get('/auth/{provider}/callback','AuthenticationController@handleProviderCallback');
 
 Route::get( "change_password", function () {
 	return view( "page.change_password" );
@@ -59,3 +54,4 @@ Route::post( "forgot_password", 'ForgotPasswordController@password' )->name( 'fo
 
 Route::get( "reset_password/{email}/{key}", 'ForgotPasswordController@reset' );
 Route::post( "reset_password/{email}/{key}", 'ForgotPasswordController@resetPassword' )->name( "reset_password" );
+

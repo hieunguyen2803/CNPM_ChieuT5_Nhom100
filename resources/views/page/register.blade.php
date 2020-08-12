@@ -59,8 +59,8 @@
                         <h2>Create Account</h2>
                         <div class="row">
                             <ul>
-                               <li><a href="{{route('redirect',['facebook'])}}"><i class="fab fa-facebook-f"></i></a></li>
-                               <li><a href="{{route('redirect')}}"><i class="fab fa-google"></i></a></li>
+                               <li><a href="auth/facebook"><i class="fab fa-facebook-f"></i></a></li>
+                               <li><a href="auth/google"><i class="fab fa-google"></i></a></li>
                                 <li><i class="fab fa-linkedin-in"></i></li>
                             </ul>
                         </div>
