@@ -23,10 +23,6 @@ class Users extends Migration
             $table->string('gender')->nullable()->default(null);
             $table->string('key')->nullable()->default(null);
             $table->string('isactive')->nullable()->default('0');
-//            $table->string('name')->nullable()->default(null);
-            $table->string('google_id')->nullable()->default(null);
-            $table->string('avatar')->nullable()->default(null);
-            $table->string('avatar_origin')->nullable()->default(null);
             $table->string('remember_token')->nullable()->default(null);
             $table->timestamp('created_at')->nullable()->default(null);
             $table->timestamp('updated_at')->nullable()->default(null);

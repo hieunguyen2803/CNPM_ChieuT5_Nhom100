@@ -59,6 +59,7 @@
                         <h2>Create Account</h2>
                         <div class="row">
                             <ul>
+{{--                                route fb gg--}}
                                <li><a href="auth/facebook"><i class="fab fa-facebook-f"></i></a></li>
                                <li><a href="auth/google"><i class="fab fa-google"></i></a></li>
                                 <li><i class="fab fa-linkedin-in"></i></li>
@@ -67,8 +68,9 @@
                         <div class="row">
                             <p class="small-info">or use your email account</p>
                         </div>
-
+{{--                        route form reg--}}
                         <form action="{{route('register')}} "method="POST">
+{{--                            thông báo trả về--}}
                         @csrf
                         <div class="text-box-cont">
                             @if(session('mess'))
